@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+</head>
+
+<body>
+    <a-scene background="color: #ffffff">
+
+        <!--Sky-->
+        <a-sky color="#EBEBEB"></a-sky>
+        
+        <!--Plane-->
+        <a-plane id = "ground" color = "green" position = "0 -3 0" rotation = "-90 0 0" width = "20", height = "20"></a-plane>
+        
+        <!--Necklace, atena and head-->
+        <a-circle position = "0 9.15 0" color = "orange" radius = "0.8" material = "side:double"></a-circle>
+        <a-cylinder color = "#757575" height = "1.5" radius = "0.05" position = "0 11 0" animation = "property:position;from: -0.2 10.4 -0.1;to: 0.2 10.4 -0.1;dir:alternate;loop:true;dur:1000;"></a-cylinder>
+        <a-sphere color = "#ef5350" radius = "0.3" position = "0 11 0"></a-cylinder>
+        <a-box id = "head" color = "#0276AA" position = "0 -3 0" width = "3.2" height = "2.2"></a-box>
+        
+        <!--Eyes-->
+        <a-sphere id = "eyes" color = "#fff" position = "-0.63 -2.7 0.2" radius = "0.6" rotation = "0 10 0"></a-sphere>
+        <a-sphere id = "eyes" color = "#fff" position = "0.63 -2.7 0.2" radius = "0.6" rotation = "0 -10 0"></a-sphere>
+        <a-sphere id = "eye balls" color = "#000" position = "-0.63 -2.95 0.95" radius = "0.15" rotation = "0 10 0" animation = "property:position;from: -0.63 -2.4 0.95;to: -0.63 -2.95 0.95;dir:alternate;loop:true;dur:1000;"></a-sphere>
+        <a-sphere id = "eye balls" color = "#000" position = "0.63 -2.4 0.75" radius = "0.15" rotation = "0 -10 0" animation = "property:position;from: 0.63 -2.4 0.75;to: 0.63 -2.95 0.75;dir:alternate;loop:true;dur:1000;"></a-sphere>
+
+        <!--Neck and Body-->
+        <a-box id = "body" color = "orange" position = "0 -4.25 0" width = "2" height = "0.1.5"></a-box>
+        <a-box id = "body" color = "#0276AA" position = "0 -7 0" width = "5" height = "5"></a-box>
+
+        <!--Arms & Legs-->
+        <a-cylinder color = "orange" height = "3.75" radius = "0.5" position = "4.4 -5.5 0" rotation = "0 180 90"></a-cylinder>
+        <a-cylinder color = "orange" height = "3.75" radius = "0.5" position = "-4.4 -5.5 0" rotation = "0 180 90"></a-cylinder>
+        <a-cylinder color = "orange" height = "3.75" radius = "0.5" position = "1 -11.4 0" rotation = "0 0 0"></a-cylinder>
+        <a-cylinder color = "orange" height = "3.75" radius = "0.5" position = "-1 -11.4 0" rotation = "0 0 0"></a-cylinder>
+
+        <!--Camera-->
+        <a-entity position="0 -5 15">
+            <a-camera></a-camera>
+        </a-entity>
+        
+    </a-scene>
+</body>
+
+</html>
